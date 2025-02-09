@@ -30,11 +30,11 @@ public void setup() {
 }
 
 @After 
-public void tearDown(Scenario scn) throws IOException {
-	String scname=scn.getName().replace(" ", "_");
+public void tearDown(Scenario sc) throws IOException {
+	String scname=sc.getName().replace(" ", "_");
 	if(scn.failed()){
 		TakesScreenshot Ts=(TakesScreenshot) driver;
-		scn.attach(Ts.getScreenshotAs(OutputType.BYTES),"image/png",scname);
+		sc.attach(Ts.getScreenshotAs(OutputType.BYTES),"image/png",scname);
 	}
 	driver.close();
 	File file=new File("D:\\CucumberFramework\\target\\Report.html");
