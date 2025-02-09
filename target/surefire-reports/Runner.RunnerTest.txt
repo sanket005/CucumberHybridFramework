@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: Runner.RunnerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.117 s <<< FAILURE! - in Runner.RunnerTest
+Login Functionality.Failed Login with invalid username  Time elapsed: 7.483 s  <<< FAILURE!
+junit.framework.AssertionFailedError
+
