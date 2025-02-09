@@ -32,10 +32,10 @@ public void setup() {
 @After 
 public void tearDown(Scenario sc) throws IOException {
 	String scname=sc.getName().replace(" ", "_");
-	
+	if(sc.failed()){
 		TakesScreenshot Ts=(TakesScreenshot) driver;
 		sc.attach(Ts.getScreenshotAs(OutputType.BYTES),"image/png",scname);
-	
+	}
 	driver.close();
 	File file=new File("D:\\CucumberFramework\\target\\Report.html");
 	Desktop.getDesktop().browse(file.toURI());
