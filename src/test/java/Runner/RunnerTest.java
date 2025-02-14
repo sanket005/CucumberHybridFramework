@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin= {"html:D:\\CucumberFramework\\target\\Report.html","pretty"},
+		plugin= {"html:D:\\CucumberFramework\\target\\Report.html"},//"pretty"},
 				 publish=true,
 	features="src\\test\\resources\\Feature\\LoginTestCase.feature",
 			glue= {"StepDefinations","Hooks"}
